@@ -34,26 +34,20 @@
         font-family: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI",
           Roboto, "Helvetica Neue", Arial, sans-serif;
       }
+
       .bg-header-image {
         background-image: url("header.png");
-      }
-      .btn-primary {
-        @apply bg-gradient-to-r from-teal-500 to-cyan-500 text-white;
-      }
-      .btn-primary:hover {
-        @apply bg-gradient-to-r from-teal-600 to-cyan-600;
       }
     </style>
   </head>
   <body
-    class="leading-normal tracking-normal text-indigo-400 m-6 bg-cover bg-fixed bg-header-image"
+    class="leading-normal tracking-normal text-white m-8 bg-cover bg-fixed bg-header-image"
   >
     <div class="h-full">
       <!--Nav-->
       <div class="w-full container mx-auto">
         <div class="w-full flex items-center justify-between py-4">
-          <a
-            href="#"
+          <div
             aria-label="Extension-Sprint Home"
             class="flex items-center"
           >
@@ -65,9 +59,9 @@
             <span
               class="text-2xl bg-clip-text text-transparent bg-gradient-to-r from-green-400 via-pink-500 to-purple-500"
             >
-              Extension-Sprint
+              Extension Sprint
             </span>
-          </a>
+          </div>
         </div>
       </div>
 
@@ -80,7 +74,7 @@
           class="flex flex-col w-full xl:w-2/5 justify-center lg:items-start"
         >
           <h1
-            class="text-3xl md:text-5xl text-white font-bold leading-tight text-center md:text-left mb-6"
+            class="text-3xl md:text-5xl font-bold leading-tight text-center md:text-left mb-6"
           >
             Build Faster with
             <span class="">Extension-Sprint</span>
@@ -95,7 +89,9 @@
           <div class="flex gap-4">
             <a
               href="https://mubaidr.gumroad.com/l/extension-sprint"
-              class="flex items-center gap-2 bg-pink-700 text-white font-bold py-2 px-6 rounded-full shadow-lg transition duration-300"
+              class="flex items-center gap-2 bg-pink-700 font-bold py-2 px-6 rounded-full shadow-lg transition duration-200 hover:shadow-xl transform hover:scale-105"
+              target="_blank"
+              title="Purchase Extension-Sprint"
             >
               <svg
                 viewBox="0 0 64 64"
@@ -144,47 +140,53 @@
 
         <!--Right Col-->
         <div class="w-full xl:w-3/5 p-12">
-          <ul class="list-disc list-inside text-white">
-            <li class="mb-2">Seamless Stripe integration for payments</li>
-            <li class="mb-2">User authentication and role management</li>
+          <ul class="list-disc list-inside text-lg">
             <li class="mb-2">
-              Responsive, dynamic UI components with Tailwind CSS
+              Multiple Auth integrations including Google and Supabase
             </li>
-            <li class="mb-2">Pre-built templates for quick deployment</li>
-            <li class="mb-2">Scalable architecture for long-term growth</li>
-            <li class="mb-2">Developer-friendly with clean, modular code</li>
+            <li class="mb-2">
+              Multiple Paymnet Integration Stripe, Lemon Squeezy and more
+            </li>
+            <li class="mb-2">
+              Tailwind with daisy ui and lot of other common configurations
+            </li>
+            <li class="mb-2">
+              Pre-built templates for browser extension pages
+            </li>
+            <li class="mb-2">Developer-friendly, clean and modular code</li>
+            <li class="mb-2">And a lot more...</li>
           </ul>
         </div>
       </div>
 
       <!--Use Cases-->
       <div class="container mx-auto py-20">
-        <!-- <h2 class="text-3xl font-bold text-center text-white mb-8">
+        <!-- <h2 class="text-3xl font-bold text-center  mb-8">
           Use Cases
         </h2> -->
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <div class="bg-gray-900 p-6 rounded-lg shadow-lg text-center">
-            <h3 class="text-2xl font-bold text-purple-500 mb-4">
-              E-commerce Extensions
-            </h3>
+          <div
+            class="bg-gray-900 p-6 rounded-lg shadow-lg text-center border border-purple-500"
+          >
+            <h3 class="text-2xl font-bold mb-4">E-commerce Extensions</h3>
             <p class="text-gray-300">
-              Seamlessly integrate payments and user management for your
-              e-commerce extension with built-in Stripe support.
+              Extensions for finding deals, applying coupons, or comparing
+              prices while shopping online.
             </p>
           </div>
-          <div class="bg-gray-900 p-6 rounded-lg shadow-lg text-center">
-            <h3 class="text-2xl font-bold text-purple-500 mb-4">
-              Productivity Tools
-            </h3>
+          <div
+            class="bg-gray-900 p-6 rounded-lg shadow-lg text-center border border-purple-500"
+          >
+            <h3 class="text-2xl font-bold mb-4">Productivity Tools</h3>
             <p class="text-gray-300">
               Boost productivity with powerful extensions, from project
               management tools to task automation systems.
             </p>
           </div>
-          <div class="bg-gray-900 p-6 rounded-lg shadow-lg text-center">
-            <h3 class="text-2xl font-bold text-purple-500 mb-4">
-              Custom Solutions
-            </h3>
+          <div
+            class="bg-gray-900 p-6 rounded-lg shadow-lg text-center border border-purple-500"
+          >
+            <h3 class="text-2xl font-bold mb-4">Custom Solutions</h3>
             <p class="text-gray-300">
               Build custom solutions for enterprise needs with robust
               authentication and role-based access controls.
@@ -196,19 +198,23 @@
       <!--Testimonial-->
       <div class="py-12">
         <div class="container mx-auto text-center">
-          <h2 class="text-3xl font-bold text-white mb-8">What Our Users Say</h2>
+          <h2 class="text-3xl font-bold mb-8">What Our Users Say</h2>
           <div
             class="flex flex-col md:flex-row justify-center space-y-8 md:space-y-0 md:space-x-8"
           >
-            <div class="bg-gray-900 p-6 rounded-lg shadow-lg">
+            <div
+              class="bg-gray-900 p-6 rounded-lg shadow-lg border border-purple-500"
+            >
               <p class="text-gray-300 italic">
                 "Using Extension-Sprint, we were able to go from idea to live
-                product much faster than expected. The built-in Stripe
-                integration saved us a lot of development time."
+                product much faster than expected. The built-in paymnent
+                integration utilities saved us a lot of development time."
               </p>
               <span class="block mt-4 text-gray-400 font-bold">- Sarah L.</span>
             </div>
-            <div class="bg-gray-900 p-6 rounded-lg shadow-lg">
+            <div
+              class="bg-gray-900 p-6 rounded-lg shadow-lg border border-purple-500"
+            >
               <p class="text-gray-300 italic">
                 "The modular structure and documentation made it easy for our
                 team to adapt the boilerplate to our specific needs. Highly
@@ -216,7 +222,34 @@
               </p>
               <span class="block mt-4 text-gray-400 font-bold">- Tom R.</span>
             </div>
+            <div
+              class="bg-gray-900 p-6 rounded-lg shadow-lg border border-purple-500"
+            >
+              <p class="text-gray-300 italic">
+                "The ease of customization and integration with our existing
+                stack was impressive. We had our extension up and running in no
+                time!"
+              </p>
+              <span class="block mt-4 text-gray-400 font-bold">- Alex M.</span>
+            </div>
+            <div
+              class="bg-gray-900 p-6 rounded-lg shadow-lg border border-purple-500"
+            >
+              <p class="text-gray-300 italic">
+                "We were able to quickly implement payment features without the
+                hassle of building from scratch. This template is a game
+                changer!"
+              </p>
+              <span class="block mt-4 text-gray-400 font-bold">- Emily K.</span>
+            </div>
           </div>
+        </div>
+      </div>
+
+      <!--Tech Stack-->
+      <div class="py-12">
+        <div class="container mx-auto text-center">
+          <h2 class="text-3xl font-bold mb-8">Tech Stack</h2>
         </div>
       </div>
 
