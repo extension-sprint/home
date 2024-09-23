@@ -34,19 +34,31 @@
         font-family: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI",
           Roboto, "Helvetica Neue", Arial, sans-serif;
       }
+      .bg-header-image {
+        background-image: url("header.png");
+      }
+      .btn-primary {
+        @apply bg-gradient-to-r from-teal-500 to-cyan-500 text-white;
+      }
+      .btn-primary:hover {
+        @apply bg-gradient-to-r from-teal-600 to-cyan-600;
+      }
     </style>
   </head>
   <body
-    class="leading-normal tracking-normal text-indigo-400 m-6 bg-cover bg-fixed"
-    style="background-image: url('header.png')"
+    class="leading-normal tracking-normal text-indigo-400 m-6 bg-cover bg-fixed bg-header-image"
   >
     <div class="h-full">
       <!--Nav-->
       <div class="w-full container mx-auto">
         <div class="w-full flex items-center justify-between py-4">
-          <div class="flex items-center">
+          <a
+            href="#"
+            aria-label="Extension-Sprint Home"
+            class="flex items-center"
+          >
             <img
-              alt="logo"
+              alt="Extension-Sprint logo"
               src="logo.png"
               class="h-8 w-8 mr-2"
             />
@@ -55,39 +67,7 @@
             >
               Extension-Sprint
             </span>
-          </div>
-          <nav class="flex space-x-4">
-            <a
-              href="#"
-              class="text-gray-500 hover:text-white"
-            >
-              Home
-            </a>
-            <a
-              href="#"
-              class="text-gray-500 hover:text-white"
-            >
-              Features
-            </a>
-            <a
-              href="#"
-              class="text-gray-500 hover:text-white"
-            >
-              Pricing
-            </a>
-            <a
-              href="#"
-              class="text-gray-500 hover:text-white"
-            >
-              Docs
-            </a>
-            <a
-              href="#"
-              class="text-gray-500 hover:text-white"
-            >
-              Contact
-            </a>
-          </nav>
+          </a>
         </div>
       </div>
 
@@ -103,11 +83,7 @@
             class="text-3xl md:text-5xl text-white font-bold leading-tight text-center md:text-left mb-6"
           >
             Build Faster with
-            <span
-              class="bg-clip-text text-transparent bg-gradient-to-r from-green-400 via-pink-500 to-purple-500"
-            >
-              Extension-Sprint
-            </span>
+            <span class="">Extension-Sprint</span>
           </h1>
           <p
             class="text-base md:text-2xl text-center md:text-left text-gray-300 mb-6"
@@ -119,7 +95,7 @@
           <div class="flex gap-4">
             <a
               href="https://mubaidr.gumroad.com/l/extension-sprint"
-              class="flex gap-4 bg-purple-500 text-white font-bold py-2 px-6 rounded-full shadow-lg hover:bg-purple-700 transition duration-300"
+              class="flex items-center gap-2 bg-pink-700 text-white font-bold py-2 px-6 rounded-full shadow-lg transition duration-300"
             >
               <svg
                 viewBox="0 0 64 64"
@@ -168,8 +144,7 @@
 
         <!--Right Col-->
         <div class="w-full xl:w-3/5 p-12">
-          <h2 class="text-2xl font-bold text-white mb-4">Key Features</h2>
-          <ul class="list-disc list-inside text-gray-300">
+          <ul class="list-disc list-inside text-white">
             <li class="mb-2">Seamless Stripe integration for payments</li>
             <li class="mb-2">User authentication and role management</li>
             <li class="mb-2">
@@ -183,34 +158,34 @@
       </div>
 
       <!--Use Cases-->
-      <div class="container mx-auto py-12">
-        <h2 class="text-3xl font-bold text-center text-white mb-8">
+      <div class="container mx-auto py-20">
+        <!-- <h2 class="text-3xl font-bold text-center text-white mb-8">
           Use Cases
-        </h2>
+        </h2> -->
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <div class="bg-white p-6 rounded-lg shadow-lg text-center">
-            <h3 class="text-xl font-bold text-purple-500 mb-4">
+          <div class="bg-gray-900 p-6 rounded-lg shadow-lg text-center">
+            <h3 class="text-2xl font-bold text-purple-500 mb-4">
               E-commerce Extensions
             </h3>
-            <p class="text-gray-600">
+            <p class="text-gray-300">
               Seamlessly integrate payments and user management for your
               e-commerce extension with built-in Stripe support.
             </p>
           </div>
-          <div class="bg-white p-6 rounded-lg shadow-lg text-center">
-            <h3 class="text-xl font-bold text-purple-500 mb-4">
+          <div class="bg-gray-900 p-6 rounded-lg shadow-lg text-center">
+            <h3 class="text-2xl font-bold text-purple-500 mb-4">
               Productivity Tools
             </h3>
-            <p class="text-gray-600">
+            <p class="text-gray-300">
               Boost productivity with powerful extensions, from project
               management tools to task automation systems.
             </p>
           </div>
-          <div class="bg-white p-6 rounded-lg shadow-lg text-center">
-            <h3 class="text-xl font-bold text-purple-500 mb-4">
+          <div class="bg-gray-900 p-6 rounded-lg shadow-lg text-center">
+            <h3 class="text-2xl font-bold text-purple-500 mb-4">
               Custom Solutions
             </h3>
-            <p class="text-gray-600">
+            <p class="text-gray-300">
               Build custom solutions for enterprise needs with robust
               authentication and role-based access controls.
             </p>
@@ -219,130 +194,38 @@
       </div>
 
       <!--Testimonial-->
-      <div class="bg-gray-800 py-12">
+      <div class="py-12">
         <div class="container mx-auto text-center">
           <h2 class="text-3xl font-bold text-white mb-8">What Our Users Say</h2>
           <div
             class="flex flex-col md:flex-row justify-center space-y-8 md:space-y-0 md:space-x-8"
           >
-            <div class="bg-white p-6 rounded-lg shadow-lg">
-              <p class="text-gray-600 italic">
-                "Extension-Sprint helped us launch our extension in record time.
-                The built-in Stripe integration is a game changer!"
+            <div class="bg-gray-900 p-6 rounded-lg shadow-lg">
+              <p class="text-gray-300 italic">
+                "Using Extension-Sprint, we were able to go from idea to live
+                product much faster than expected. The built-in Stripe
+                integration saved us a lot of development time."
               </p>
-              <span class="block mt-4 text-gray-900 font-bold">
-                - Jane Doe, CEO of FastExtension
-              </span>
+              <span class="block mt-4 text-gray-400 font-bold">- Sarah L.</span>
             </div>
-            <div class="bg-white p-6 rounded-lg shadow-lg">
-              <p class="text-gray-600 italic">
-                "We scaled our browser extension business with ease thanks to
-                the clean, modular codebase."
+            <div class="bg-gray-900 p-6 rounded-lg shadow-lg">
+              <p class="text-gray-300 italic">
+                "The modular structure and documentation made it easy for our
+                team to adapt the boilerplate to our specific needs. Highly
+                recommended!"
               </p>
-              <span class="block mt-4 text-gray-900 font-bold">
-                - John Smith, Founder of ProductivityTools
-              </span>
+              <span class="block mt-4 text-gray-400 font-bold">- Tom R.</span>
             </div>
           </div>
-        </div>
-      </div>
-
-      <!--Pricing Section-->
-      <div class="container mx-auto py-12">
-        <h2 class="text-3xl font-bold text-center text-white mb-8">Pricing</h2>
-        <div
-          class="flex flex-col md:flex-row justify-center space-y-8 md:space-y-0 md:space-x-8"
-        >
-          <!--Free Plan-->
-          <div class="bg-white p-6 rounded-lg shadow-lg text-center">
-            <h3 class="text-xl font-bold text-purple-500 mb-4">Free</h3>
-            <p class="text-gray-600 mb-4">
-              Get started with essential features
-            </p>
-            <ul class="text-gray-600 mb-4">
-              <li class="mb-2">Basic Stripe Integration</li>
-              <li class="mb-2">User Authentication</li>
-              <li class="mb-2">Community Support</li>
-            </ul>
-            <a
-              href="#"
-              class="bg-purple-500 text-white font-bold py-2 px-6 rounded-full hover:bg-purple-700"
-            >
-              Start for Free
-            </a>
-          </div>
-
-          <!--Pro Plan-->
-          <div class="bg-white p-6 rounded-lg shadow-lg text-center">
-            <h3 class="text-xl font-bold text-purple-500 mb-4">Pro</h3>
-            <p class="text-gray-600 mb-4">Everything in Free, plus:</p>
-            <ul class="text-gray-600 mb-4">
-              <li class="mb-2">Advanced Stripe Integration</li>
-              <li class="mb-2">Role-based Access Controls</li>
-              <li class="mb-2">Priority Support</li>
-              <li class="mb-2">Analytics Dashboard</li>
-            </ul>
-            <a
-              href="#"
-              class="bg-purple-500 text-white font-bold py-2 px-6 rounded-full hover:bg-purple-700"
-            >
-              Go Pro
-            </a>
-          </div>
-
-          <!--Enterprise Plan-->
-          <div class="bg-white p-6 rounded-lg shadow-lg text-center">
-            <h3 class="text-xl font-bold text-purple-500 mb-4">Enterprise</h3>
-            <p class="text-gray-600 mb-4">
-              Custom solution for large businesses
-            </p>
-            <ul class="text-gray-600 mb-4">
-              <li class="mb-2">Dedicated Account Manager</li>
-              <li class="mb-2">Custom Integrations</li>
-              <li class="mb-2">SLA-based Support</li>
-              <li class="mb-2">White-label Solutions</li>
-            </ul>
-            <a
-              href="#"
-              class="bg-purple-500 text-white font-bold py-2 px-6 rounded-full hover:bg-purple-700"
-            >
-              Contact Us
-            </a>
-          </div>
-        </div>
-      </div>
-
-      <!--Call to Action-->
-      <div
-        class="bg-gradient-to-r from-green-400 via-pink-500 to-purple-500 text-white py-12 mt-12 rounded-full"
-      >
-        <div class="container mx-auto text-center">
-          <h2 class="text-4xl font-bold mb-4">
-            Ready to Scale Your Extension Business?
-          </h2>
-          <p class="text-lg mb-8">
-            Sign up today and launch your extension with ease using
-            Extension-Sprint.
-          </p>
-          <a
-            href="#"
-            class="bg-white text-purple-500 font-bold py-2 px-6 rounded-full shadow-lg hover:bg-gray-200 transition duration-300"
-          >
-            Try it Free
-          </a>
         </div>
       </div>
 
       <!--Footer-->
-      <div class="w-full pt-16 pb-6 text-sm text-center text-gray-500">
-        &copy; Extension-Sprint 2024 by
-        <a
-          href="mubaidr.js.org"
-          class="text-gray-500 hover:underline"
-        >
-          mubaidr
-        </a>
-      </div>
+      <footer class="py-6">
+        <div class="container mx-auto text-center text-gray-400">
+          <p>&copy; 2024 Extension-Sprint. All Rights Reserved.</p>
+        </div>
+      </footer>
     </div>
   </body>
 </html>
